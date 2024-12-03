@@ -1,0 +1,47 @@
+site_name: Jonatin Web
+site_url: https://mydomain.org/mysite
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - toc.follow
+    #- toc.integrate 
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+
+  palette: 
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+  
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+        
+plugins:
+  - search
+  - tags:
+      tags_file: about/tags.md
+
+nav: 
+  - Home: index.md
+  - About: 
+    - Examples: about/example.md 
+    - Copilot Q&A: about/random.md
+  - Tags: about/tags.md
+    
