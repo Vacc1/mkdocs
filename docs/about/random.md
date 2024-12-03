@@ -2,9 +2,6 @@
 tags:
   - Nics
 ---
-
-...
-
 #  Random questions and answer from copilot
 
 ## **What is a network card?**
