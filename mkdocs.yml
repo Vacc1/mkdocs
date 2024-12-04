@@ -13,7 +13,6 @@ theme:
     - navigation.expand
     - navigation.path
     - toc.follow
-    #- toc.integrate 
     - navigation.top
     - search.suggest
     - search.highlight
@@ -44,5 +43,7 @@ nav:
     - Examples: about/example.md 
     - Copilot Q&A: about/random.md
   - Tags: about/tags.md
-  - Ethernet Standards: Ethernet_standard.md
+  - Standards:
+    - Ethernet Standards: Standards/Ethernet_standard.md
+    - CAT list: Standards/cat_list.md
     
