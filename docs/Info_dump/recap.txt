@@ -1,0 +1,522 @@
+- OSI – For computer to communicated with each other  
+    > OSI – 7 layers
+	> 7 / Application
+	> 6 / Presentation
+	> 5 / Session
+	> 4 / Transport
+	> 3 / Networking
+	> 2 / Data link
+	> 1 / Physical
+- layer 1 
+    > Analog modem 
+	> Modulates signal digital-to-analog
+	> demodulates signal analog-to-digital
+    > Hub 
+	> Replicates signal to the other ports
+
+- layer 2
+    > Switch 
+	> ASIC chip 
+	    > Works with MAC address 
+    > Wireless access point (WAP) 
+	> Connects wireless/wired network segments
+
+- layer 3 
+    > Multilayer switch (MLS) 
+	> Most common in layer 3 than 2  
+	> ASIC chip works higher than layer 2 
+    > Router
+	> Most common device to connect networks
+	> Uses software to learn about routes between networks
+
+- Security devices
+    > Firewall
+	> Allows or deny network traffic
+	> Can be hardware or software
+    > Intrusion detection system (IDS)
+	> Informs when malicious actions have occurred (they are passive)
+    > Intrusion prevention system (IPS) 
+	> Take action against malicious activities are detected
+
+- Optimization and performance devices
+    > load balancer (content switch)(content filler) (hardware or software)
+	>  Balance request across multiple devices that contain the same data
+    > Proxy server
+	> Acts on behave of a client device to fulfill requests to retrieve data
+	> Also can limit what requests are fulfilled
+
+- Network services and application
+    > Virtual private network (VPN)
+	> Allows remote sites or users to access a private network
+	> Functions as a local segment
+	> Site to site VPN
+	    > Connects two sites together
+	> Remote-access VPN (host to site VPN)
+	    >  Allow users to connect but requires user to have preconfigured VPN clients installed on their system
+	> Host to host VPN (SSL VPN)
+	    > Allows user to connect to the private network without VPN client software  
+    > IPsec
+	> Most common protocol for secure VPN connection
+	> layer 3 and above
+	> Generic Routing Encapsulation (GRE)
+	    > Tunneling protocol that encapsulate wide variety of other networks layer protocol
+	    > Used with IPsec for multicast and broadcast packet transmission
+	> Point-to-Point Tunneling Protocol (PPTP)
+	    > Older VPN technology that supports dial-up VPN connections
+	> TLS
+	    > Cryptographic protocol that provides authentication services
+	    > Used in web based transactions
+	    > Replaced SSL
+	> SSL
+	    > Similar to TLS but replace by it
+	> Network access service (NIC)
+	    > Operates on layer 2 and 1
+	    > Determines which network protocol a device will use on the network
+	    > Converts the network bits into electrical signal
+	> RADIUS
+	    > AAA protocol used to authenticate end users
+	    > Robust accounting features
+	> TACACS+
+	    > AAA protocol used to authenticate end devices
+	    > encrypts all transmissions between devices
+	> RAS
+	    > Description of software and hardware required for remote access connection
+	    > Not a protocol
+	> Web services
+	    > Allow disparate software or platforms to communicate.
+	    > Uses XML format that most software can understand
+	> Unified voices services
+	    > Description of software and hardware for voice communication into a network
+
+- DHCP in the network
+    > Static IP
+	> Administrator supplies specific IP
+    > Dynamic IP
+	> Uses DHCP to distribute IP
+    > DHCP
+	> How it work
+	     > Sends discovery packets	
+	     > Offer packets to let the device know the DHCP has required information
+	     > When it receive the packet, device sends a request packet for IP
+	     > DHCP gets the requested packet, it responds with acknowledgement packet 
+	> Uses UDP port 67
+	> UDP port 68 to provide the IP to PC
+	> IP address come from scope (range) of addresses
+	> Admin reserves a pool of addresses
+	    > Includes
+		> Default gateway
+		> DNS server
+		> time servers
+		> other options
+	> Addresses are leased and it expires, but can request the same IP
+	> DHCP relay
+	    > Used when DHCP server is not on local network segments
+
+- DNS service 
+    > DNS servers	
+	> Maps human friendly names to IP addresses
+	> Uses root, TLD and local to resolve FQDN (Fully Qualify Domain Name) to the right IP address
+	> Responses either authoritative or non-authoritative
+    > DNS records
+	> A
+	    > Records maps hostnames to IPV4 addresses
+	> AAAA
+	    > Records maps hostnames to IPV6 addresses
+	> CNAME
+	    > Records maps canonical names to hostnames
+	> PTR
+	    > Records points to canonical names
+	> MX
+	    > Records points to the email server that handles the email for a given domain
+    > DDNS
+	> Lightweight adjustments to the local DNS database
+	> Useful for networks that don't use static IP addresses
+        > DDNS updating
+	    > Automatically updates DNS records without manually input the information
+
+- Network address translation (NAT)
+    > Solves the problem of how to route non-routable IP addresses
+    > Transform private IP address into a routable public IP address 
+	> (since private IP can't cross public IP network) 
+	> which allows access outside the local network
+    > SNAT (static NAT)
+	> Private IP address get assigned a specific public IP address
+    > DNAT (Dynamic NAT)
+	> Private IP address get assigned a dynamic public IP address from available pool of addresses
+    > PAT (Port Address Translation)
+	> Extend the capabilities of DNAT
+	> Dynamically sends IP address and port numbers to the public IP 
+    > NAT terminology
+	> Inside local
+	    > Private IP inside the local network
+	> Inside global
+	    > Public IP inside the local network
+	> Outside local
+	    > Private IP outside the local network
+	> Outside global
+	    > Public IP outside the local network
+
+- WAN technologies
+    > Infrastructure not owned by a single entity
+    > PSTN
+	> Used to carry analog traffic through a dial-up connection or digital traffic through ISDN or xDSL connections
+	> Most widely use WAN infrastructures
+    > Broadband cable
+	> Cables provided by companies that can carry voice, data, and television through the same cable
+	> Signal is formatted at the headend and sent to the distribution network and then sent to the end users
+	> End users all share the bandwidth of the distribution network
+    > Fiber
+	> Fast, high bandwidth that uses light to transmit voice and data through fiber optic cable
+	> Can achieve multiple gigabits transmission level
+	> SONET (in US) and SDH 
+	    > Establish the base rates of the OC levels
+	> DWDM and CWDM 
+	    > Are methods used to multiplex multiple OC levels into a single fiber optic cable
+    > Cellular network
+        > GSM and CDMA
+	    > Main methods of connecting cellular devices to cellular network
+	    > They aren't compatible
+	> True WAN cellular connections where not available until HSPA+
+	    > Is the gap measure between 3G and 4G networking
+	> The standard for cellular networking is 4G which consist of LTE and WiMAX
+	> WiMAX
+	    > Was designed as a last mile solution for areas in DSL and cable were not available 
+	    > Uses microwaves signals between line-of-sight relay stations to deliver broadband traffic to a fixed location
+	    > Compatible with LTE so is considered a 4G technology
+ 	    > Span significant geographic distances
+	> Satellite
+	    >  Uses microwave radio transmissions as method of transmitting data over the air
+	    > Uses microwave radio relays and satellites to span large distances within the line of site
+	    > Vast distances often lead to latency in the transmissions
+ 	> Metro Ethernet
+	    > The service provider supplies the customers with what appears to be an Ethernet connection
+	    > The service provider may use a variety of different WAN technologies, depending on the level of service required
+	> Lease line
+	    > A dedicated connection between two end nodes that the customer leases from telecommunications company
+	    > Uses POTS or a fiber connection
+	    > A T-carrier line is composed of 24 DS0 channels, that can handle 4 kbps
+	        > 24 DSO channels make up a single DS1 line
+	    > Optical carriers level are established by SONET and SDH
+		> Can use CWDM or DWDM to increase capacity on a cable
+	    > Common carriers lines
+		> T-carriers
+		    > T1 (1.544 Mbps) and T3 (44.736 Mbps)
+		    > T3 compose of 28 T1 lines
+		> E-carriers
+		    > E1 (2.048 Mbps) and E3 (34.368 Mbps)
+		    > E3 compose of 16 E1 lines
+		> Optical Carriers (OC)
+		    > OC1 (51.84 Mbps) OC3 (155.52 Mbps)
+    > Circuit switches
+	> Dedicated point to point connection between two nodes
+	> Commonly used with leased line networks
+    > Packet switch network
+	> Data is broken down into smaller packets 
+	> Routed through the network using the destination address
+	> Data can take different paths to reach the final destination
+	> Packets can be different sizes
+	    > Frame relay
+		> Mimic a circuit switch network
+	    > ATM (Asynchronous Transfer Mode)
+		> Uses a fixed cell sizes (53 bits) to quickly move network traffic 
+		> Fast but it don't use the available bandwidth efficiently due to fixed size of the cells
+	> Multiprotocol Label Switching (MLS)
+	    > Gain popularity for its scalability and protocol independence
+	    > Uses LERs to insert MPLS labels into packets
+	    > Uses LSRs to route the packets to their destinations
+	    > Can replace frame relay and ATM or using with either of them
+
+- Network cabling
+    > Twister pair cabling
+	> The modern LAN standard
+	> It's composed of four pairs of color coded wires
+	> Each pair of wires is twisted together to reduce interference
+	    > Shielded twister pair (STP)
+		> Contains extra shielding to further reduce interference
+	> Sometimes a plenum grade cable may be called for by building codes
+	    > Most common types are:
+		> Straight through
+		> crossover
+		> rollover 
+	> Twisted pair network connectors
+	    > RJ11
+		> A modular six position four contact (6P4C) connector that is commonly used for telephony
+	    > RJ45
+		> A modular 8P8C connector that is used to carry network traffic
+	    > RJ48C
+		> A modular 8P8C connector that is commonly used  to terminate a T1 line
+	    > Punchdown blocks
+		> Used to terminate and distribute networks run by twister pair wires
+	    > DB-9 and DB-25
+		> Can be used for serial communications between nodes
+	> Twister pair categories
+	    > CAT3
+		> Speeds of 10 Mbps
+	    > CAT5 
+		> Speeds of 100 Mbps
+	    > CAT5a
+		> Speeds of 1000 Mbps
+	    > CAT6
+		> Speeds of 10 Gbps (over maximum 55m)
+	    > CAT6sa
+		> Speeds of 10 Gbps  (100m maximum distance)
+    > Coaxial cabling
+	> Compose of a central conductor covered by an insulating sheath
+	> Covered by a foil or metal mesh sheath
+	> Covered by a an outer insulating layer
+	> RG58 
+	    > No longer found in the modern network
+	> RG59 
+	    > Provides a short distance broadband connection between two devices
+	> RG6
+	    > Most commonly used grade of cable
+	    > Cable companies used it to connect to the cable modem
+    > Fiber optic cabling
+	> Expensive and can be difficult to work with but...
+	    > Can resist all forms of EMI and can span long distances
+	> The grade of connector can influence the quality of the signal
+	> Fiber optic classification by type transmission
+	    > MMF
+	    > SMF
+	> Categories types of connectors
+	    > SC
+	    > ST
+	    > LC
+	    > MTRJ
+    > Media converters
+	> It transition one type of network cabling to another
+	> Common media converters
+	    > SMF to Ethernet
+	    > MMF to Ethernet
+	    > SMF to MMF
+	    > Fiber to coaxial 
+    > Cabling tools
+	> Common cabling tools
+	    > Crimpers
+	    > Strippers
+	    > Punchdown tools
+	    > Cable testers
+	> Uncommon cabling tools
+	    > TDR
+	    > OTDR
+
+- Network topologies
+    > Topology definition
+	> A map that can be used to describe the signal path or physical layout of a network
+    > Peer-to-peer 
+	> There is no central control of network resources
+	> Each node determines what will share and what it will not share
+    > client/server
+	> There is a central control of shared networks resources with a server controlling access
+	> A network can have aspects of both and this is called hybrid topology
+    > Network topology models
+	> Are logic bus networks regardless of the physical layout
+	> Topologies models
+	    > Bus 
+		> Signal goes end-to-end
+	    > Ring
+		> Bus with the ends connected
+	    > Star
+		> Nodes radiates out
+	    > Mesh
+		> Multipath
+	    > Point-to-point
+		> Direct connection
+	    > Point-to-multipoint
+		> central control
+	    > MPLS
+		> A topology used to improve QoS and network traffic flows
+
+- Network infrastructure implementations
+    > Design vs. functions
+	> A network can be describe by its design or by its function
+	> When describing the design (bus, star or point-to-point) the topology is actually being described
+	> When describing the function (LAN, WAN, or SCADA) of a network, it is actually the category or infrastructure implementation that is being discussed
+    > Categories of networks
+	> LAN
+	    > Spans a small area, like a building 
+	> MAN
+	    > Larger than the LAN
+	    > There is not a distinct line between LAN and MAN
+	> WAN
+	    > Span large geographic areas
+	> PAN 
+	    > Very small, low powered networks that tend to only span two devices 
+	> SCADA
+	    > Special purpose network used to control equipment and processes across multiple industrial site
+	> Medianet
+	    > A purpose built infrastructure designed and implemented specifically to handle voice and video traffic
+	> Tips for finding the right category
+	    > If the infrastructure is owned by one entity, is not a WAN
+
+- Introduction to IPv4
+    > Purpose of IP addressing
+	> Provides means of identifying the pathways between networks and nodes
+	> Logical in nature so it can be easily changed
+    > IPv4 address properties
+	> 32-bit binary number (base 2)
+	> 4 billions of possible combinations
+	> Subnet mask
+	    > Allow for the identification of the network and node portions of the IP address
+    > Classes of IPv4 addresses
+	> Classes
+	    > A
+	    > B
+	    > C
+	    > D
+	> Structured and rigid and don't allow for much flexibility
+	> APIPA address
+	    > Special address that denoted the failures of DHCP
+	> Public address are routable
+	> Private address are not
+	    > Very specific ranges of addresses available in the private space
+    > Classless IPv4 addressing
+	> CIDR
+	    > Removes the class structure from address
+	    > More flexibility and efficient in design and utilization
+	    > Allow for subnetting of addresses
+    > Subnetting IPv4 addresses
+	> Taking the network address space that is available and creating small pieces
+	> Creates flexibility and security with a network
+
+- Introduction to IPv6
+    > IPv6 address structure
+	> Develop by IANA for replacement for IPv4
+	> 128-bit binary addressing
+	> Is represented by eight sets of colon separated hexadecimal numbers (each set representing 16 bits)
+	> Capable of auto-configuration through the use of NDP
+	> DHCPv6
+	    > Only used in certain specific network configurations
+    > IPv6 network transmission
+	> Unicast
+	    > One-to-one communication (one device sending to a registered device)
+	> Multicast
+	    > One-to-a-few communication (one device sending to a registered group)
+	> Anycast
+	    > One-to-the-closest communication (one device sends to a specific IPv6 address which has been assigned to multiple devices and the closest one receive the packet)
+	> Implementing dual stack configuration or using 6to4 tunneling
+	> Can be used in conjunction with Ipv4
+
+- Special IP networking concepts
+    > Media access control (MAC)
+	> Comes with network devices
+	> Also called the physical address or burned in address
+	> Uses Layer 2 to deliver networks packets to the correct nodes on the network
+	> Mac is compose of the OUI, assign by the IEEE and the EUI, which is assigned by the manufacturer
+	> IPv6 requires an EUI-64 format address
+    > Collision domains vs. broadcast domains
+	> Ethernet networks utilize CSMA/CD to alleviate network traffic collisions
+	> Collision domains
+	    > Broken up by Layer 2 and higher devices
+	> Broadcast domains
+	    > Areas of the network that will receive broadcast network traffic
+	> IPv6 uses multicast transmissions in place of broadcast
+    > Types of network transmissions
+	> IPv4
+	    > Unicast (one-to-one communication)
+	    > Multicast (one to a few communication)
+	    > Broadcast (one-to-all communication)
+	> IPv6
+	    > Unicast
+	    > Multicast
+	    > Anycast (one-to-closes)
+		> Delivers network traffic to the nearest device that has a specific IPv6 address, which has been assigned to multiple devices
+
+- Introduction to routing concepts
+    > The purpose of routing
+	> Is to connect different networks together logically for communications purposes
+	> Allow for networks data traffic to reach remote networks
+	> Routing protocols are used to build dynamic routes between networks
+    > Basic routing concepts
+	> Static routing
+	    > Administratively configured routes between networks
+		> Administrator must manually make any changes
+	> Dynamic routing
+	    > Protocol configured routes between networks
+		> Protocols determines when and how to make routing changes
+	> Default route
+	    > Interface or next hop that a router sends a network packet to when no known route exist
+	> Routing table
+	    > Administratively configured or protocol configured table of routes to all known networks
+	> Loopback interface
+	    > Logically assign interface used to ease the administrative management of a router
+	> Routing loop
+	    > Possible problem between interconnected routers where network traffic keeps circling until some system or mechanism break the cycle
+    > Routing metrics
+	> Used to determine which route is the best route to use to reach remote networks
+	> Routing protocol
+	    > Use the same metrics. but will use different algorithms to populate their routing tables
+	> Common metrics
+	    > Hop count
+	    > MTU
+            > Bandwidth
+	    > Latency
+	    > AD
+    > Route aggregation
+	> Without some planning, routing tables can become large and inefficient
+	> Route aggregation is a method of summarizing routes to different networks through the use of CIDR
+	> Care and caution must be used when non-contiguous network are present
+    > High availability
+	> Used to remove single points of failure from networks
+	> HSRP and VRRP
+	    > Examples that are implemented to reduce the chances that a single router going offline will create a problem for the network
+
+- Introduction to routing protocols
+    > Interior vs. exterior gateway protocols
+	> IGP routing protocol
+	    > Used within autonomous networks (networks under the control of a single organization)
+	    > Some are used as AS number to help determine which networks can connect with each other
+	> BGP routing protocols
+	    > Used between non-autonomous networks
+	> IGP and EGP can be broken into three types
+	    > Distance-vector protocols
+	    > Link state protocols
+	    > Hybrid protocols
+		> Their classification is determine by how they operate
+	> The next hop
+	    > The next router in the path of the route
+	> Routing table
+	    > Database of all known routes from the perspective of the router
+	> Convergence
+	    > When the network has reached a steady state
+    > Routing protocols
+	> RIPv2
+	    > Distance vector routing protocol that only cares about the number of hops between the source and destination
+	> OSPF and IS-IS
+	    > Link state protocols that use the Dijkstra algorithm
+	> BGP 
+	    > Hybrid path-vector routing protocol and is considered the routing protocol of the internet
+	> EIGRP
+	    > Advance distance-vector (hybrid) routing protocol developed by Cisco
+
+- Virtualization technologies
+    > Hypervisors and Virtual Machines Managers 
+	> Depending on the source, both can be the same thing
+	> Other differentiate the two this way
+	    > Hypervisor doesn't require a host operation system in other to function and serve up VMs
+	    > VMM requires the use of an underlying host operating system in order to function
+    > Components of virtualization
+	> VM can be created to fulfill almost any function in the modern network
+	    > e.g., virtual desktop, server, routers and switches
+	> VM may be: 
+	    > Completely self contained
+	    > A connection may be created between the host system's physical NIC and a virtual networking device to allow network traffic to pass through systems
+    > Software defined networking
+	> SDN
+	    > Emerging technology that is being used to allow network administrators to dynamically adjust network performance from a single interface
+	    > This eliminates the need for the administrator to log into each network device that needs to be adjusted in order to achieve the desired performance 
+
+- Storage area networks
+    > Justification for storage area networks
+	> Reduction in cost of storage
+	> Increased desire to access data at anytime from anywhere led a increase demand for data storage
+	> SAN
+	    > Solution to the data storage needs of the modern era
+	    > Scalable
+	    > Increased data availability
+	    > Optimize network performance
+    > SAN technology
+	> network of storage capacity
+        > NAS
+	    > Data storage device (or devices) that is attached to a network
+	    > Multiple NAS devices may be found within a SAN
