@@ -51,5 +51,6 @@ nav:
   - Tags: about/tags.md
   - Standards:
     - Ethernet Standards: Standards/Ethernet_standard.md
+    - Ethernet Stardards 2: Standards/Ethernet_Standard_2.md
     - CAT list: Standards/cat_list.md
     - Canvas: Standards/Canvas.md
