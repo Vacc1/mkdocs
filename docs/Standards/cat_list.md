@@ -1,3 +1,7 @@
+---
+tags:
+  - CAT
+---
 | Category (CAT)     | Ethernet Standard  | Speed   | Cable Type              | Maximum Distance  | IEEE Specification | Year of Standard   |
 |--------------------|--------------------|---------|-------------------------|-------------------|--------------------|-------------------|
 | CAT3               | 10BaseT            | 10 Mbps | UTP                     | 100 meters        | IEEE 802.3i        | 1990              |

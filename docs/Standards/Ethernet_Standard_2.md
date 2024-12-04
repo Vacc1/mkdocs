@@ -1,3 +1,7 @@
+---
+tags:
+  - Standards
+---
 # Added Years of Standard
 | Ethernet Standard | Speed    | Cable Type             | Maximum Distance | IEEE Specification | Year of Standard |
 | ----------------- | -------- | ---------------------- | ---------------- | ------------------ | ---------------- |

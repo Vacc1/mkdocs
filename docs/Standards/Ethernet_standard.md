@@ -1,3 +1,7 @@
+---
+tags:
+  - Standards
+---
 | Ethernet Standard | Speed    | Cable Type             | Maximum Distance | IEEE Specification |
 | ----------------- | -------- | ---------------------- | ---------------- | ------------------ |
 | 10Base2           | 10 Mbps  | Coaxial (Thin)         | 185 meters       | IEEE 802.3a        |
