@@ -36,6 +36,12 @@ plugins:
   - search
   - tags:
       tags_file: about/tags.md
+  - glightbox
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
 
 nav: 
   - Home: index.md
@@ -46,4 +52,4 @@ nav:
   - Standards:
     - Ethernet Standards: Standards/Ethernet_standard.md
     - CAT list: Standards/cat_list.md
-    
+    - Canvas: Standards/Canvas.md
